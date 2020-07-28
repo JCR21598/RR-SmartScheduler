@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		372066AB24C830A900F991AD /* taskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372066AA24C830A900F991AD /* taskViewController.swift */; };
+		372066AD24C830D000F991AD /* scheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372066AC24C830D000F991AD /* scheduleViewController.swift */; };
+		376B520124B74E9400BF2EDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B520024B74E9400BF2EDF /* AppDelegate.swift */; };
+		376B520324B74E9400BF2EDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376B520224B74E9400BF2EDF /* SceneDelegate.swift */; };
+		376B520824B74E9400BF2EDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376B520624B74E9400BF2EDF /* Main.storyboard */; };
+		376B520B24B74E9400BF2EDF /* ScheduleSmart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 376B520924B74E9400BF2EDF /* ScheduleSmart.xcdatamodeld */; };
+		376B520D24B74E9A00BF2EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376B520C24B74E9A00BF2EDF /* Assets.xcassets */; };
+		376B521024B74E9A00BF2EDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376B520E24B74E9A00BF2EDF /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		372066AA24C830A900F991AD /* taskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskViewController.swift; sourceTree = "<group>"; };
+		372066AC24C830D000F991AD /* scheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleViewController.swift; sourceTree = "<group>"; };
+		376B51FD24B74E9400BF2EDF /* ScheduleSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		376B520024B74E9400BF2EDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		376B520224B74E9400BF2EDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		376B520724B74E9400BF2EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		376B520A24B74E9400BF2EDF /* ScheduleSmart.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScheduleSmart.xcdatamodel; sourceTree = "<group>"; };
+		376B520C24B74E9A00BF2EDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		376B520F24B74E9A00BF2EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		376B521124B74E9A00BF2EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		376B51FA24B74E9400BF2EDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		376B51F424B74E9400BF2EDF = {
+			isa = PBXGroup;
+			children = (
+				376B51FF24B74E9400BF2EDF /* ScheduleSmart */,
+				376B51FE24B74E9400BF2EDF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		376B51FE24B74E9400BF2EDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				376B51FD24B74E9400BF2EDF /* ScheduleSmart.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		376B51FF24B74E9400BF2EDF /* ScheduleSmart */ = {
+			isa = PBXGroup;
+			children = (
+				376B521A24C2115900BF2EDF /* Suporting Documents */,
+				376B521924C2110B00BF2EDF /* Model */,
+				376B521824C2110600BF2EDF /* View */,
+				376B521724C210FB00BF2EDF /* Controller */,
+				376B521124B74E9A00BF2EDF /* Info.plist */,
+				376B520924B74E9400BF2EDF /* ScheduleSmart.xcdatamodeld */,
+			);
+			path = ScheduleSmart;
+			sourceTree = "<group>";
+		};
+		376B521724C210FB00BF2EDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				372066AA24C830A900F991AD /* taskViewController.swift */,
+				372066AC24C830D000F991AD /* scheduleViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		376B521824C2110600BF2EDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				376B520C24B74E9A00BF2EDF /* Assets.xcassets */,
+				376B520024B74E9400BF2EDF /* AppDelegate.swift */,
+				376B520224B74E9400BF2EDF /* SceneDelegate.swift */,
+				376B520E24B74E9A00BF2EDF /* LaunchScreen.storyboard */,
+				376B520624B74E9400BF2EDF /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		376B521924C2110B00BF2EDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		376B521A24C2115900BF2EDF /* Suporting Documents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Suporting Documents";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		376B51FC24B74E9400BF2EDF /* ScheduleSmart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376B521424B74E9A00BF2EDF /* Build configuration list for PBXNativeTarget "ScheduleSmart" */;
+			buildPhases = (
+				376B51F924B74E9400BF2EDF /* Sources */,
+				376B51FA24B74E9400BF2EDF /* Frameworks */,
+				376B51FB24B74E9400BF2EDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScheduleSmart;
+			productName = ScheduleSmart;
+			productReference = 376B51FD24B74E9400BF2EDF /* ScheduleSmart.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		376B51F524B74E9400BF2EDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Juan Camilo Rodriguez";
+				TargetAttributes = {
+					376B51FC24B74E9400BF2EDF = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 376B51F824B74E9400BF2EDF /* Build configuration list for PBXProject "ScheduleSmart" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 376B51F424B74E9400BF2EDF;
+			productRefGroup = 376B51FE24B74E9400BF2EDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				376B51FC24B74E9400BF2EDF /* ScheduleSmart */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		376B51FB24B74E9400BF2EDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376B521024B74E9A00BF2EDF /* LaunchScreen.storyboard in Resources */,
+				376B520D24B74E9A00BF2EDF /* Assets.xcassets in Resources */,
+				376B520824B74E9400BF2EDF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		376B51F924B74E9400BF2EDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376B520124B74E9400BF2EDF /* AppDelegate.swift in Sources */,
+				372066AB24C830A900F991AD /* taskViewController.swift in Sources */,
+				372066AD24C830D000F991AD /* scheduleViewController.swift in Sources */,
+				376B520B24B74E9400BF2EDF /* ScheduleSmart.xcdatamodeld in Sources */,
+				376B520324B74E9400BF2EDF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		376B520624B74E9400BF2EDF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				376B520724B74E9400BF2EDF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		376B520E24B74E9A00BF2EDF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				376B520F24B74E9A00BF2EDF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		376B521224B74E9A00BF2EDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		376B521324B74E9A00BF2EDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		376B521524B74E9A00BF2EDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ScheduleSmart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = JCRVMobApp.ScheduleSmart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		376B521624B74E9A00BF2EDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ScheduleSmart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = JCRVMobApp.ScheduleSmart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		376B51F824B74E9400BF2EDF /* Build configuration list for PBXProject "ScheduleSmart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376B521224B74E9A00BF2EDF /* Debug */,
+				376B521324B74E9A00BF2EDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376B521424B74E9A00BF2EDF /* Build configuration list for PBXNativeTarget "ScheduleSmart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376B521524B74E9A00BF2EDF /* Debug */,
+				376B521624B74E9A00BF2EDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		376B520924B74E9400BF2EDF /* ScheduleSmart.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				376B520A24B74E9400BF2EDF /* ScheduleSmart.xcdatamodel */,
+			);
+			currentVersion = 376B520A24B74E9400BF2EDF /* ScheduleSmart.xcdatamodel */;
+			path = ScheduleSmart.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 376B51F524B74E9400BF2EDF /* Project object */;
+}
