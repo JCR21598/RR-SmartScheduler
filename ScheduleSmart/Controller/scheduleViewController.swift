@@ -20,10 +20,10 @@ class scheduleViewController: UIViewController {
     let progressBar = CAShapeLayer()
     let backgroundBar = CAShapeLayer()
     let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-    var backgoundBarSize = UIBezierPath(arcCenter: CGPoint(x: 0, y: 0), radius: CGFloat(0), startAngle: +CGFloat.pi/2, endAngle: 2 * CGFloat.pi, clockwise: true)
-    var progessBarSize = UIBezierPath(arcCenter: CGPoint(x: 0, y: 0), radius: CGFloat(0), startAngle: +CGFloat.pi/2, endAngle: 2 * CGFloat.pi, clockwise: true)
+    var backgoundBar = UIBezierPath(arcCenter: CGPoint(x: 0, y: 0), radius: CGFloat(0), startAngle: +CGFloat.pi/2, endAngle: 2 * CGFloat.pi, clockwise: true)
+    var timerBar = UIBezierPath(arcCenter: CGPoint(x: 0, y: 0), radius: CGFloat(0), startAngle: +CGFloat.pi/2, endAngle: 2 * CGFloat.pi, clockwise: true)
     
-    var percentageCompleate = 0.0
+    var timeCirclePercentage = 0.0
     
     
         // Attributes to recieve data from taskViewController
@@ -96,6 +96,14 @@ class scheduleViewController: UIViewController {
     
     //  Methods
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // if timer is not terminated - this will terminate timer when changing view
+        timer.invalidate()
+    }
+    
+    
     override func viewDidLoad(){
         
         // Initial calls for view
@@ -120,50 +128,73 @@ class scheduleViewController: UIViewController {
         
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        // Regardless not being terminated acceidently - this will terminate timer when changing view
-        timer.invalidate()
-    }
     
     @objc func updating() {
         
         /// When there is only a task to do on the list
         if finalCycleTasks.count == 1{
-            nextTaskLabel.text = "Upcoming: End of cycle!"
+
+            nextTaskLabel.text = "Only this task pending"
+            
         }
+        
             
-        else if Int(count) >= self.finalCycleTime*60{
+        // This is considering there is more than a value in list and have reached end of task time
+        if Int(count) >= self.finalCycleTime*60{
             
+            /// Reset values
             count = 0.0
-            percentageCompleate = 0.0
-            if currentIndex == (self.finalCycleTasks.count - 1){
-                currentIndex = 0
-                nextTaskLabel.text = "Upcoming task: \(self.finalCycleTasks[0])"
+            timeCirclePercentage = 0.0
+            
+            
+            if currentIndex + 1 <= finalCycleTasks.count - 1{
+                currentIndex += 1
+                checkNextTask()
             }
             else{
-                currentIndex += 1
-                nextTaskLabel.text = "Upcoming task: \(self.finalCycleTasks[currentIndex+1])"
+                currentIndex = 0
+                checkNextTask()
             }
+            
             currentTaskLabel.text = (String(finalCycleTasks[self.currentIndex]))
+            
             return
         }
         
         
-        // Display seconds - when <= 60 seconds
+        // Time label
+        
+        /// Display seconds - when <= 60 seconds
         if (finalCycleTime*60)-Int(count) <= 60{
             countDownLabel.text = String((finalCycleTime*60)-Int(count)) + " s"
-            percentageCompleate = Double(count)/(Double(self.finalCycleTime)*60.0)
+
         }
-        else{ // Display mins - when > 60 seconds
+        /// Display mins - when > 60 seconds
+        else{
             countDownLabel.text = String(Int(self.finalCycleTime*60-(Int(count)))/60) + " m"
-            percentageCompleate = Double(count)/(Double(self.finalCycleTime)*60.0)
         }
+        
+        
+        // Update values
+        timeCirclePercentage = Double(count)/(Double(self.finalCycleTime)*60.0)
         count += 0.01
         updatingCircle()
     }
     
+    
+    func checkNextTask(){
+        /// Setting for nextTasklabel
+        if currentIndex + 1 > finalCycleTasks.count-1{
+            
+            ///When there is no more tasks to set for upcoming - set back to start
+            nextTaskLabel.text = "Upcoming: \(self.finalCycleTasks[0])"
+        }
+        else{
+            ///otherwise set to the next one
+            nextTaskLabel.text = "Upcoming: \(self.finalCycleTasks[currentIndex + 1])"
+            
+        }
+    }
     
     // The method that everything to do with the circle seen in the view
     @objc func updatingCircle(){
@@ -182,21 +213,21 @@ class scheduleViewController: UIViewController {
         // Location of each of the elements 
         countDownLabel.center = CGPoint(x: (width/2), y: (height/4))
 
-        backgoundBarSize = UIBezierPath(arcCenter: CGPoint(x: width/2, y: (height/4)+topSafeArea), radius: CGFloat(width/4), startAngle: -CGFloat.pi/2,
-                                        endAngle: 1.5 * CGFloat.pi, clockwise: true) //Gray background progess bar size
-        progessBarSize = UIBezierPath(arcCenter: CGPoint(x: width/2, y: (height/4)+topSafeArea), radius: CGFloat(width/4), startAngle: -CGFloat.pi/2,
-                                      endAngle: CGFloat((percentageCompleate*360)-90)*(CGFloat.pi/180), clockwise: true) //Gray background progess bar size
-
+        backgoundBar = UIBezierPath(arcCenter: CGPoint(x: width/2, y: (height/4)+topSafeArea), radius: CGFloat(width/4), startAngle: -CGFloat.pi/2,
+                                        endAngle: 1.5 * CGFloat.pi, clockwise: true)
+        
+        timerBar = UIBezierPath(arcCenter: CGPoint(x: width/2, y: (height/4)+topSafeArea), radius: CGFloat(width/4), startAngle: -CGFloat.pi/2,
+                                      endAngle: CGFloat((timeCirclePercentage*360)-90)*(CGFloat.pi/180), clockwise: true)
         
         // The static bar that indicates that pathing of the dynamic circle
-        backgroundBar.path = backgoundBarSize.cgPath
+        backgroundBar.path = backgoundBar.cgPath
         backgroundBar.strokeColor = UIColor(red: 0, green: 80/225, blue: 115/225, alpha: 1).cgColor
         backgroundBar.lineWidth = CGFloat(width*0.08)
         backgroundBar.fillColor = UIColor.clear.cgColor
 
         
         // The dynamic bar
-        progressBar.path = progessBarSize.cgPath
+        progressBar.path = timerBar.cgPath
         progressBar.strokeColor = UIColor(red: 238/225, green: 28/225, blue: 37/225, alpha: 1).cgColor
         progressBar.lineWidth = CGFloat(width*0.08)
         progressBar.fillColor = UIColor.clear.cgColor
