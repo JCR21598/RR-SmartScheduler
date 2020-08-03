@@ -58,13 +58,13 @@ class scheduleViewController: UIViewController {
             return
         }
         
-        //
+        // By removing one, the whole list is dropped by one 
         if currentIndex == (self.finalCycleTasks.count){
             
             currentIndex -= 1
             nextTaskLabel.text = "Upcoming: \(self.finalCycleTasks[0])"
         }
-        //
+        // For when its the last item in the list
         else if currentIndex == (self.finalCycleTasks.count - 1){
         
             nextTaskLabel.text = "Upcoming: \(self.finalCycleTasks[0])"
