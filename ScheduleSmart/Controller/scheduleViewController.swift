@@ -60,18 +60,18 @@ class scheduleViewController: UIViewController {
         
         //
         if currentIndex == (self.finalCycleTasks.count){
-            print("1")
+            
             currentIndex -= 1
             nextTaskLabel.text = "Upcoming: \(self.finalCycleTasks[0])"
         }
         //
         else if currentIndex == (self.finalCycleTasks.count - 1){
-            print("2")
+        
             nextTaskLabel.text = "Upcoming: \(self.finalCycleTasks[0])"
         }
         // If there are no problems with removing the task then continue as normal
         else{
-            print("3")
+        
             nextTaskLabel.text = "Upcoming: \(self.finalCycleTasks[currentIndex+1])"
         }
         currentTaskLabel.text = (String(finalCycleTasks[self.currentIndex]))
