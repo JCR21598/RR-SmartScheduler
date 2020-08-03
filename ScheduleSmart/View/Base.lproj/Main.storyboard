@@ -86,6 +86,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" red="0.019607843137254902" green="0.011764705882352941" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="XPv-kO-gVP" firstAttribute="centerX" secondItem="m8c-wO-YiN" secondAttribute="centerX" id="5Fd-2R-AWO"/>
                                     <constraint firstItem="XPv-kO-gVP" firstAttribute="centerY" secondItem="m8c-wO-YiN" secondAttribute="centerY" multiplier="0.7" id="PWA-H0-CGV"/>
@@ -208,7 +209,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.019607843137254902" green="0.011764705882352941" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="m8c-wO-YiN" firstAttribute="leading" secondItem="1VU-mM-Bbh" secondAttribute="leading" id="4b2-Kw-s5D"/>
                             <constraint firstAttribute="trailing" secondItem="GHo-Xg-4We" secondAttribute="trailing" id="4mW-7K-1gc"/>

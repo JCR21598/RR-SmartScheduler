@@ -34,13 +34,13 @@ class taskViewController: UIViewController{
     /// Button to start thr Round Robin
     @IBAction func startButton(_ sender: UIButton) {
         
-        /// If no time is not set
-        if timeLabel.text == "Time in mins"{
-            alert(title: "No time allocated", message: "Please set a time for your taks using the slider")
-        }
         /// If no tasks are set
-        else if taskList.isEmpty{
-            alert(title: "No task set", message: "Please enter the task you would like to compleate")
+        if taskList.isEmpty{
+            alert(title: "No task set", message: "Please enter the task you would like to complete")
+        }
+        /// If no time is not set
+        else if timeLabel.text == "Time in mins"{
+            alert(title: "No time allocated", message: "Please set a time for your tasks using the slider")
         }
         /// If tasks and time are set then start
         else{
